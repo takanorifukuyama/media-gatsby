@@ -2,4 +2,6 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. Blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus.
+**Takanori Fukuyama** この世界、つまらないと思わない？？大体のことが想定内でつまらない。もっと自由に思考し、行動して、自分の人生を決める権利があるはず。
+まあ、それも俺はあまり興味がないけど。生きている目的を求めることができる公式を求めようとしてる。
+→→[TwitterDMかもん](https://twitter.com/thisistakanori)
