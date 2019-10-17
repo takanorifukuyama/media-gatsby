@@ -1,16 +1,3 @@
----
-title: golangのAPI作った(Gin,Gorm)
-category: "golang"
-cover: 1_gViWI8dDXWcBkRdDP_CpQQ.png
-author: Takanori Fukuyama
----
-
-
-### ソースコード
-
-![golang](./photo-1465070845512-2b2dbdc6df66.jpg)
-
-```go
 package main
 
 import (
@@ -33,12 +20,6 @@ func main() {
 
 func newRouter() *gin.Engine {
     r := gin.Default()
-
-    r.GET("/v1/core/user/healthcheck", func(c *gin.Context) {
-        c.JSON(200, gin.H{
-            "status": "OK",
-        })
-    })
 
     r.POST("/v1/core/user", func(c *gin.Context) {
         uuidObj, _ := uuid.NewUUID()
@@ -72,14 +53,14 @@ func newRouter() *gin.Engine {
 
     r.GET("/v1/core/user/:id", func(c *gin.Context) {
         id := c.Param("id")
-        result := connection().Where("UserID = ?", id).First(&tUserAuth{})
+        result := connection().Where("aikasa = ?", id).First(&tUserAuth{})
         c.JSON(200, result)
         connection().Close()
     })
 
     r.DELETE("/v1/core/user/:id", func(c *gin.Context) {
         id := c.Param("id")
-        connection().Where("UserID = ?", id).Delete(tUserAuth{})
+        connection().Where("aikasa = ?", id).Delete(tUserAuth{})
         connection().Close()
         c.JSON(200, gin.H{
             "status": "OK",
@@ -105,7 +86,7 @@ type tUserAuth struct {
     Line      string `json:"line_id"`
     Facebook  string `json:"facebook_id"`
     Google    string `json:"google_id"`
-    Profile   tUser  `json:"profile"`
+    Profile   tUser `json:"profile"`
 }
 
 func connection() *gorm.DB{
@@ -113,7 +94,7 @@ func connection() *gorm.DB{
     USER := "root"
     PASS := os.Getenv("MYSQL_PASSWORD")
     PROTOCOL := "tcp(mysql:3306)"
-    DBNAME := "sample_db"
+    DBNAME := "aikasa_db"
 
     CONNECT := USER + ":" + PASS + "@" + PROTOCOL + "/" + DBNAME + "?parseTime=true"
     db, err := gorm.Open(DBMS, CONNECT)
@@ -122,7 +103,3 @@ func connection() *gorm.DB{
     }
     return db
 }
-
-```
-
-とりあえずテスト
