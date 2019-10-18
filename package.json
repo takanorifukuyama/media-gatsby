@@ -44,6 +44,7 @@
     "react-instantsearch": "^5.2.2",
     "react-md-spinner": "^0.3.0",
     "react-obfuscate": "^2.1.4",
+    "react-particles-js": "^2.7.0",
     "react-share": "^2.2.0",
     "react-visibility-sensor": "^4.1.0",
     "styled-jsx": "^2.2.7",
@@ -64,7 +65,8 @@
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
     "stylelint": "stylelint src/**/*.js",
-    "generate-app-icons": "sh ./scripts/generate-app-icons.sh"
+    "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
+    "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",

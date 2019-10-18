@@ -2,16 +2,43 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { FaArrowDown } from "react-icons/fa/";
+import Particles from "react-particles-js";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
+  const settings = {
+    particles: {
+      number: {
+        value: 10
+      },
+      size: {
+        value: 3
+      },
+      move: {
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200
+        }
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: "repulse"
+        }
+      }
+    }
+  };
 
   return (
     <React.Fragment>
       <section className="hero">
-        <h1>
+        <h1 className="title">
           一緒に世界を変えよう！&nbsp; <strong>TFBlog</strong> made by GatsbyJS&nbsp;Reactはいいぞ。
         </h1>
+        <Particles params={settings} />
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
