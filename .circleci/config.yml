@@ -14,20 +14,20 @@ jobs:
             - yarn-packages-v1-{{ .Branch }}-
             - yarn-packages-v1-
       - run: yarn install
-      - save_cache:
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - run: yarn lint
+      # - save_cache:
+      #     key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      #     paths:
+      #       - ~/.cache/yarn
+      # - run: yarn lint
       # - run: yarn typecheck
       - run: yarn build
-      - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - public/
-            - node_modules/
-            - package.json
-            - firebase.json
+      # - persist_to_workspace:
+      #     root: ~/repo
+      #     paths:
+      #       - public/
+      #       - node_modules/
+      #       - package.json
+      #       - firebase.json
   deploy:
     <<: *default_settings
     steps:
