@@ -2,9 +2,8 @@
 title: footnote
 ---
 
-* it's a demo site of the [GitHub](https://github.com/takanorifukuyama/media-gatsby)
-* built by [greg lobinski](https://www.greglobinski.com)
-<!-- * Check [Front-end web development with Greg](https://dev.greglobinski.com) -->
+* built by [Takanori](https://twitter.com/thisistakanori)
+* photos by [shimoren](https://www.instagram.com/shimoren.photo/?hl=ja)
+* it's a site of the [GitHub](https://github.com/takanorifukuyama/media-gatsby)
 * delivered by [Firebase](https://firebase.google.com/)
-<!-- * photos by [unsplash.com](https://unsplash.com) -->
 <!-- * graphic by [pixabay.com](https://pixabay.com) -->
