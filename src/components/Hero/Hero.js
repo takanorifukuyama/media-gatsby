@@ -9,17 +9,7 @@ const Hero = props => {
   const settings = {
     particles: {
       number: {
-        value: 10
-      },
-      size: {
-        value: 3
-      },
-      move: {
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200
-        }
+        value: 50
       }
     },
     interactivity: {
@@ -35,10 +25,13 @@ const Hero = props => {
   return (
     <React.Fragment>
       <section className="hero">
+        <Particles
+          params={settings}
+          style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
+        />
         <h1 className="title">
           一緒に世界を変えよう！&nbsp; <strong>TFBlog</strong> made by GatsbyJS&nbsp;Reactはいいぞ。
         </h1>
-        <Particles params={settings} />
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
         </button>
