@@ -27,7 +27,7 @@ const Hero = props => {
       <section className="hero">
         <Particles
           params={settings}
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", zIndex: -2 }}
+          style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
         />
         <h1 className="title">
           一緒に世界を変えよう！&nbsp; <strong>TFBlog</strong> made by GatsbyJS&nbsp;Reactはいいぞ。
