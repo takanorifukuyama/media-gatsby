@@ -3,7 +3,7 @@ module.exports = {
   shortSiteTitle: "tfblog - made by Gatsbyjs", // <title> ending for posts and pages
   siteDescription: "tfBlog is made by Gatsbyjs.",
   siteUrl: "https://takanorifukuyama.com",
-  // pathPrefix: "",
+  pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "ja",
 
