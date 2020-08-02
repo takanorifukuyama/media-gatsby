@@ -57,6 +57,8 @@ typings/
 # dotenv environment variables file
 .envrc
 
+.env
+
 .cache/
 .DS_Store
 public/

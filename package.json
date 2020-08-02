@@ -66,7 +66,7 @@
     "lint": "eslint src/**/*.{js,jsx}",
     "stylelint": "stylelint src/**/*.js",
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
-    "deploy": "yarn build && firebase deploy"
+    "hosting": "yarn build && firebase deploy --only hosting"
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
