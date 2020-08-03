@@ -30,7 +30,7 @@ const Hero = props => {
           style={{ position: "absolute", top: 0, left: 0, width: "100%" }}
         />
         <h1 className="title">
-          一緒に世界を変えよう！&nbsp; <strong>TFBlog</strong> made by GatsbyJS&nbsp;Reactはいいぞ。
+          Accelerating the world's technology! &nbsp; <strong>To find out the answers.</strong> That's why I live.
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
